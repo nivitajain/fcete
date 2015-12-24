@@ -31,13 +31,919 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <p>
-</p>
+        <p>&lt;!DOCTYPE html&gt;</p>
 
 
 
-<p>
-</p>
+
+
+<p>&lt;!--[if gt IE 9]&gt;&lt;!--&gt;  &lt;!--&lt;![endif]--&gt;
+    </p>
+
+
+
+<pre><code>    {MobileAppHeaders}
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}&lt;/title&gt;
+    {block:Description}
+    &lt;meta name="description" content="{MetaDescription}"&gt;
+    {/block:Description}
+
+    {block:Hidden}
+    &lt;meta name="if:Sliding header" content="1"&gt;
+    &lt;meta name="if:Show navigation" content="1"&gt;
+    &lt;meta name="if:Endless scrolling" content="1"&gt;
+    &lt;meta name="if:Syntax highlighting" content="0"&gt;
+    &lt;meta name="select:Layout" content="regular" title="Regular"&gt;
+    &lt;meta name="select:Layout" content="narrow" title="Narrow"&gt;
+    &lt;meta name="select:Layout" content="grid" title="Grid"&gt;
+    &lt;meta name="if:Related Posts" content="1"&gt;
+    &lt;meta name="text:Disqus shortname" content=""&gt;
+    &lt;meta name="text:Google analytics ID" content=""&gt;
+    {/block:Hidden}
+
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"&gt;
+    &lt;link rel="shortcut icon" href="{Favicon}"&gt;
+    &lt;link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}"&gt;
+    &lt;link rel="alternate" type="application/rss+xml" href="{RSS}"&gt;
+
+    &lt;link rel="stylesheet" href="http://static.tumblr.com/05o0pke/yeTnx9gi9/main-min.css"&gt;
+    {block:IfSyntaxHighlighting}
+    &lt;link rel="stylesheet" href="http://static.tumblr.com/ehm1tdz/2VWnye81h/tumblr-highlightjs.css"&gt;
+    {/block:IfSyntaxHighlighting}
+
+    &lt;!-- HTML5 Shiv --&gt;
+    &lt;!--[if lt IE 9]&gt;
+        &lt;script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;style&gt;
+        /* Colors */
+        body {
+            background: {BackgroundColor};
+        }
+
+        .blog-title {
+            font-family: {TitleFont}, "Helvetica Neue", HelveticaNeue, Arial, sans-serif;
+            font-weight: {TitleFontWeight};
+        }
+
+        .blog-title a,
+        .description,
+        .search-no-results {
+            color: {TitleColor};
+        }
+
+        a {
+            color: {AccentColor};
+        }
+
+        #pagination a,
+        .nav-wrapper .nav-item .label {
+            color: {AccentColor};
+        }
+
+        #pagination a.next:after {
+            border-left-color: {AccentColor};
+        }
+
+        #pagination a.previous:after {
+            border-right-color: {AccentColor};
+        }
+
+        .loader .loader-bar {
+            background-color: {TitleColor};
+        }
+
+        .header-image.cover {
+            background-image: url({HeaderImage});
+        }
+
+        .user-avatar {
+            background-color: {BackgroundColor};
+            border-color: {BackgroundColor};
+        }
+
+        .avatar-style-square .user-avatar {
+            -webkit-box-shadow: 0 0 0 4px {BackgroundColor};
+            box-shadow: 0 0 0 4px {BackgroundColor};
+        }
+
+        .no-header-image .logo-wrapper,
+        .contain-header-image .logo-wrapper {
+            color: {AccentColor};
+        }
+
+        /* Adjust logo for light accents on light backgrounds */
+        .light-on-light.no-header-image .logo-wrapper,
+        .light-on-light.contain-header-image .logo-wrapper {
+            color: #444;
+        }
+
+        /* Adjust logo for dark accents on dark backgrounds */
+        .dark-on-dark.no-header-image .logo-wrapper,
+        .dark-on-dark.contain-header-image .logo-wrapper {
+            color: #fff;
+        }
+
+        .related-posts-wrapper &gt; h2 {
+            color: {TitleColor};
+        }
+
+        @media screen and (max-device-width: 568px) {
+            .header-image.cover {
+                background-image: url({HeaderImage-640});
+                -webkit-background-size: cover;
+                background-size: cover;
+            }
+
+            .avatar-style-square .user-avatar {
+                -webkit-box-shadow: 0 0 0 3px {BackgroundColor};
+                -moz-box-shadow: 0 0 0 3px {BackgroundColor};
+                box-shadow: 0 0 0 3px {BackgroundColor};
+            }
+
+        }
+
+        /* Custom CSS */
+        {CustomCSS}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body data-urlencoded-name="{URLEncodedName}" class="{select:Layout}{block:IndexPage} index-page{/block:IndexPage}{block:PermalinkPage} permalink{/block:PermalinkPage}{block:SearchPage} search-page{block:NoSearchResults} no-results{/block:NoSearchResults}{/block:SearchPage}{block:HideHeaderImage} no-header-image{/block:HideHeaderImage}{block:NoStretchHeaderImage} contain-header-image{/block:NoStretchHeaderImage}{block:IfRelatedPosts} display-related-posts{/block:IfRelatedPosts}"&gt;
+
+    &lt;div class="app-nag"&gt;
+        &lt;div class="app-nag-header clearfix"&gt;
+            &lt;div class="app-nag-icon"&gt;
+                &lt;div class="app-nag-icon-ios"&gt;
+                    &lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve"&gt;
+                        &lt;path fill="#36465D" d="M1024,771c0,139.2-113.8,253-253,253H253C113.8,1024,0,910.2,0,771V253C0,113.8,113.8,0,253,0h518 c139.2,0,253,113.8,253,253V771z"/&gt;
+                        &lt;path fill="none" stroke="#FFF100" stroke-width="4" stroke-miterlimit="10" d="M463.9,209.4"/&gt;
+                        &lt;path opacity="0.6" fill="#231F20" d="M628.1,681c8.2,0,17.1-1.2,25.8-3.3V530.3h111.6V401.8h-68.6V473H585.4v162.4 C586,676.3,609.1,681,628.1,681z M654.4,250.5h-68.6v94h68.6V250.5z M754.3,722.9c-12.7,7.1-28.9,12.4-44.3,14.5l11.4,33.8 c-20.5,27-71.4,45.5-118.1,46.3c-1.6,0-3.1,0-4.7,0c0,0,0,0,0,0c-32.5,0-59.5-5.7-81.9-15.3c26.2,40,72.7,72.6,150.5,72.6c0,0,0,0,0,0c1.6,0,3.1,0,4.7,0c46.6-0.8,97.6-19.4,118.1-46.3L754.3,722.9z"/&gt;
+                        &lt;path fill="none" stroke="#FFF100" stroke-width="4" stroke-miterlimit="10" d="M355,359.5"/&gt;
+                        &lt;path fill="#FFFFFF" d="M577.5,830.6c65.1,0,129.7-23.2,151-51.3l4.3-5.6l-40.4-119.7c-0.4-1.1-1.4-1.9-2.6-1.9h-7.6h-3.5l-79.1,0 c-1.2,0-2.3-0.8-2.6-2c-1.1-4-1.7-8.9-1.8-14.9V489c0-1.5,1.2-2.7,2.7-2.7h106.1c1.5,0,2.7-1.2,2.7-2.7V333.8c0-1.5-1.2-2.7-2.7-2.7 H598.4c-1.5,0-2.7-1.2-2.7-2.7V182.5c0-1.5-1.2-2.7-2.7-2.7h-82.6h-28.9h-73.8c-13.3,0-28.5,9.8-30.8,28 c-9.3,75.3-43.8,120.5-108.7,142.2l-7.2,2.4c-1.1,0.4-1.9,1.4-1.9,2.6v128.6c0,1.5,1.2,2.7,2.7,2.7h50.4h0h15.9c0,0,0,120,0,158.3 C328.1,771,415.7,830.6,577.5,830.6z M701.6,769.5c-20.3,19.5-62,34.1-102,34.7c-1.5,0-3,0-4.5,0h0 c-131.5,0-166.6-100.4-166.6-159.7V462.3c0-1.5-1.2-2.7-2.7-2.7h-63.6c-1.5,0-2.7-1.2-2.7-2.7v-83c0-1.1,0.7-2.1,1.7-2.5 c68-26.5,105.9-79,115.9-160.3c0.6-4.5,4.3-4.6,4.3-4.6h84.9c1.5,0,2.7,1.2,2.7,2.7v145.9c0,1.5,1.2,2.7,2.7,2.7h105.7 c1.5,0,2.7,1.2,2.7,2.7v96.4c0,1.5-1.2,2.7-2.7,2.7H571.3c-1.5,0-2.7,1.2-2.7,2.7l0,173.2c0.6,39,19.5,58.8,56.1,58.8 c14.7,0,31.6-3.4,47.1-9.3c1.4-0.6,3,0.2,3.5,1.6l27,80C702.6,767.7,702.4,768.8,701.6,769.5z"/&gt;
+                        &lt;path opacity="0.5" fill="#2D3F54" d="M328.1,528.9h73.8v-40.2c0-1.3-1.1-2.4-2.4-2.4h-71.4V528.9z"/&gt;
+                    &lt;/svg&gt;
+                &lt;/div&gt;
+                &lt;div class="app-nag-icon-android"&gt;
+                    &lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve"&gt;
+                        &lt;path fill="none" stroke="#FFF100" stroke-width="4" stroke-miterlimit="10" d="M463.9,209.4"&gt;&lt;/path&gt;
+                        &lt;path opacity="0.5" fill="#231F20" d="M628.1,681c8.2,0,17.1-1.2,25.8-3.3V530.3h111.6V401.8h-68.6V473H585.4v162.4 C586,676.3,609.1,681,628.1,681z M654.4,250.5h-68.6v94h68.6V250.5z M754.3,722.9c-12.7,7.1-28.9,12.4-44.3,14.5l11.4,33.8 c-20.5,27-71.4,45.5-118.1,46.3c-1.6,0-3.1,0-4.7,0c0,0,0,0,0,0c-32.5,0-59.5-5.7-81.9-15.3c26.2,40,72.7,72.6,150.5,72.6c0,0,0,0,0,0c1.6,0,3.1,0,4.7,0c46.6-0.8,97.6-19.4,118.1-46.3L754.3,722.9z"&gt;&lt;/path&gt;
+                        &lt;path fill="none" stroke="#FFF100" stroke-width="4" stroke-miterlimit="10" d="M355,359.5"&gt;&lt;/path&gt;
+                        &lt;path fill="#36465D" d="M577.5,830.6c65.1,0,129.7-23.2,151-51.3l4.3-5.6l-40.4-119.7c-0.4-1.1-1.4-1.9-2.6-1.9h-7.6h-3.5l-79.1,0 c-1.2,0-2.3-0.8-2.6-2c-1.1-4-1.7-8.9-1.8-14.9V489c0-1.5,1.2-2.7,2.7-2.7h106.1c1.5,0,2.7-1.2,2.7-2.7V333.8c0-1.5-1.2-2.7-2.7-2.7 H598.4c-1.5,0-2.7-1.2-2.7-2.7V182.5c0-1.5-1.2-2.7-2.7-2.7h-82.6h-28.9h-73.8c-13.3,0-28.5,9.8-30.8,28 c-9.3,75.3-43.8,120.5-108.7,142.2l-7.2,2.4c-1.1,0.4-1.9,1.4-1.9,2.6v128.6c0,1.5,1.2,2.7,2.7,2.7h50.4h0h15.9c0,0,0,120,0,158.3 C328.1,771,415.7,830.6,577.5,830.6z M701.6,769.5c-20.3,19.5-62,34.1-102,34.7c-1.5,0-3,0-4.5,0h0 c-131.5,0-166.6-100.4-166.6-159.7V462.3c0-1.5-1.2-2.7-2.7-2.7h-63.6c-1.5,0-2.7-1.2-2.7-2.7v-83c0-1.1,0.7-2.1,1.7-2.5 c68-26.5,105.9-79,115.9-160.3c0.6-4.5,4.3-4.6,4.3-4.6h84.9c1.5,0,2.7,1.2,2.7,2.7v145.9c0,1.5,1.2,2.7,2.7,2.7h105.7 c1.5,0,2.7,1.2,2.7,2.7v96.4c0,1.5-1.2,2.7-2.7,2.7H571.3c-1.5,0-2.7,1.2-2.7,2.7l0,173.2c0.6,39,19.5,58.8,56.1,58.8 c14.7,0,31.6-3.4,47.1-9.3c1.4-0.6,3,0.2,3.5,1.6l27,80C702.6,767.7,702.4,768.8,701.6,769.5z"&gt;&lt;/path&gt;
+                        &lt;path opacity="0.5" fill="#2D3F54" d="M328.1,528.9h73.8v-40.2c0-1.3-1.1-2.4-2.4-2.4h-71.4V528.9z"&gt;&lt;/path&gt;
+                    &lt;/svg&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="app-nag-ratings"&gt;
+                &lt;svg width="181px" height="30px" viewBox="0 0 181 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+                    &lt;g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"&gt;
+                        &lt;path d="M15.8,25.2 L6.1,29.8 L7.5,19.2 L0.1,11.4 L10.6,9.5 L15.8,0 L20.9,9.5 L31.4,11.4 L24,19.2 L25.4,29.8 L15.8,25.2 Z" fill="#FFC00E"&gt;&lt;/path&gt;
+                        &lt;path d="M52.8,25.2 L43.1,29.8 L44.5,19.2 L37.1,11.4 L47.6,9.5 L52.8,0 L57.9,9.5 L68.4,11.4 L61,19.2 L62.4,29.8 L52.8,25.2 Z" fill="#FFC00E"&gt;&lt;/path&gt;
+                        &lt;path d="M89.8,25.2 L80.1,29.8 L81.5,19.2 L74.1,11.4 L84.6,9.5 L89.8,0 L94.9,9.5 L105.4,11.4 L98,19.2 L99.4,29.8 L89.8,25.2 Z" fill="#FFC00E"&gt;&lt;/path&gt;
+                        &lt;path d="M126.8,25.2 L117.1,29.8 L118.5,19.2 L111.1,11.4 L121.6,9.5 L126.8,0 L131.9,9.5 L142.4,11.4 L135,19.2 L136.4,29.8 L126.8,25.2 Z" fill="#FFC00E"&gt;&lt;/path&gt;
+                        &lt;path d="M163.8,25.2 L154.1,29.8 L155.5,19.2 L148.1,11.4 L158.6,9.5 L163.8,0 L168.9,9.5 L179.4,11.4 L172,19.2 L173.4,29.8 L163.8,25.2 Z" fill="#E7E7E7"&gt;&lt;/path&gt;
+                        &lt;path d="M163.3,25.1 L154.1,29.8 L155.5,19.2 L148.1,11.4 L158.6,9.5 L163.3,0.9 L163.3,25.1 Z" fill="#FFC00E"&gt;&lt;/path&gt;
+                    &lt;/g&gt;
+                &lt;/svg&gt;
+                &lt;div class="app-nag-ratings-text app-nag-ratings-text-android"&gt;
+                    {lang:Android rating numbers}
+                &lt;/div&gt;
+                &lt;div class="app-nag-ratings-text app-nag-ratings-text-ios"&gt;
+                    {lang:iOS rating numbers}
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="app-nag-close-button"&gt;
+                &lt;svg width="15px" height="15px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+                    &lt;g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"&gt;
+                        &lt;path d="M12.510351,14.6860639 L0,27.1964147 L2.175713,29.3721278 L14.686064,16.8617771 L27.196415,29.3721278 L29.372128,27.1964147 L16.861777,14.6860639 L29.372128,2.1757132 L27.196415,0 L14.686064,12.5103507 L2.175713,0 L0,2.1757132 L12.510351,14.6860639 L12.510351,14.6860639 Z" fill="#D3D3D3"&gt;&lt;/path&gt;
+                    &lt;/g&gt;
+                &lt;/svg&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="app-nag-body"&gt;
+            &lt;h1 class="app-nag-callout"&gt;{lang:Engagement popover title}&lt;/h1&gt;
+            &lt;a class="app-nag-large-button app-nag-app-store-link button blue"&gt;{lang:Engagement popover button}&lt;/a&gt;
+            &lt;a class="app-nag-large-button app-nag-app-store-deny"&gt;{lang:Dismiss engagement popover}&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;section id="page"&gt;
+        &lt;div class="logo-wrapper"&gt;
+            &lt;a class="t-logo" href="https://www.tumblr.com/?referring_blog={URLEncodedName}&amp;amp;referer=optica" target="_blank"&gt;
+                &lt;svg class="svg-logo" width="29px" height="39px" viewBox="0 0 29 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+                    &lt;g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"&gt;
+                        &lt;path class="large-shadow" d="M21.9956664,26.3 L21.9956664,19.0055544 L27.9954227,19.0055542 L27.9954227,13.0048828 L27.9954227,11.0108643 L23.522766,11.0108643 L23.5540067,11.6669807 L23.7388305,15.5486452 L17.6832886,15.4792482 L17.4,24 C17.5,26.3 18.8,26.5 19.8,26.5 C20.2,26.5 21.4956664,26.4 21.9956664,26.3 Z M18.7154541,4.00225829 L17.4,2.9 L17.4,8 L22.000122,7.34490957 L22.000122,4.00225829 L18.7154541,4.00225829 Z M24.3,29.6 L24.9,31.5 C23.8,32.9 21,34 18.4,34 L18.1,34 C16.3,34 14.8,33.7 13.6,33.2 C15,35.4 17.5999998,38.0021971 21.7999998,38.0021971 C21.7999996,38.6099361 22.0022113,38.0021971 22.0999998,38.0021971 C24.6999998,38.0021971 27.4,36.1 28.6,34.7 L26.7,28.8 C26,29.2 25.1,29.5 24.3,29.6 Z" id="Shape" fill="#000000"&gt;&lt;/path&gt;
+                        &lt;path class="inner" d="M18.5,33.6 L18.3,33.6 C11.1,33.6 9,28.2005493 9,25.0005493 L9,15 C8.58245849,15 4.99298096,15 5,15 L4.99298096,10.0285034 C4.99298096,9.92850342 5.1,9.9 5.2,9.9 C8.9,8.5 11.3,6.7 11.9,2.3 C11.8,2 12,2 12,2 L16.8,2 L17,2 L17,9.00006104 L23.012207,9.00006104 L23.012207,15 L17,15 L17,24.0839844 C17,26.1839844 17.8,27.3 19.8,27.3 C20.6,27.3 21.5,27.1 22.4,26.8 C22.5,26.8 22.6,26.8 22.6,26.9 L24.1,31.3 L24.1,31.7 C23,32.8 20.7,33.6 18.5,33.6 Z"&gt;&lt;/path&gt;
+                        &lt;path class="outer" d="M26.1,32.2 L26.3,31.9 L23.9,25.1 C23.9,25 23.8,25 23.8,25 L19.2,25 C19.1,25 19,25.1 19,25 C18.9,24.8 19,24.4 19,24.1 L19,17 L25,17 L25,7 C25,7 19,7 19,7 L19,0 L8,0 C7.3,0 6.4,0.8 6.3,1.8 C5.8,5.9 4.1,7.5 0.5,8.7 L0.1,8.8 C0,8.9 0,8.9 0,9 L0,17.0000006 C0,17.1000006 0.1,17 0.1,17 L4,17 L4,24.8 C4,31.8 8.46560059,36.0067139 17.3656006,36.0067139 C22.0656006,36.0067139 25,33.7 26.1,32.2 Z M18.5,33.6 L18.3,33.6 C11.1,33.6 9,28.2005493 9,25.0005493 L9,15 C8.58245849,15 4.99298096,15 5,15 L4.99298096,10.0285034 C4.99298096,9.92850342 5.1,9.9 5.2,9.9 C8.9,8.5 11.3,6.7 11.9,2.3 C11.8,2 12,2 12,2 L16.8,2 L17,2 L17,9.00006104 L23.012207,9.00006104 L23.012207,15 L17,15 L17,24.0839844 C17,26.1839844 17.8,27.3 19.8,27.3 C20.6,27.3 21.5,27.1 22.4,26.8 C22.5,26.8 22.6,26.8 22.6,26.9 L24.1,31.3 L24.1,31.7 C23,32.8 20.7,33.6 18.5,33.6 Z"&gt;&lt;/path&gt;
+                        &lt;path class="small-shadow" d="M4,19 L7,19 L7,17.0833333 C7,17 6.9,17 6.9,17 L4,17 L4,19 L4,19 Z" opacity="0.5" fill="#37465D"&gt;&lt;/path&gt;
+                    &lt;/g&gt;
+                &lt;/svg&gt;
+            &lt;/a&gt;
+            &lt;div class="search-wrapper"&gt;
+                &lt;form action="/search" method="get" id="search"&gt;
+                    &lt;label class="search-field-label"&gt;
+                        &lt;input type="text" class="search-field" name="q" id="q" placeholder="{lang:Search Blog}" value="{SearchQuery}" autocomplete="off"&gt;
+                    &lt;/label&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="header-wrapper
+            {block:HideTitle}{block:HideDescription}no-title-desc {/block:HideDescription}{/block:HideTitle}
+            {block:HideHeaderImage}no-image {/block:HideHeaderImage}
+            {block:HideAvatar}avatar-hidden{/block:HideAvatar}
+            {block:ShowAvatar}avatar-style-{AvatarShape}{/block:ShowAvatar}"&gt;
+
+            &lt;header id="header"&gt;
+                {block:ShowHeaderImage}
+                &lt;div class="header-image-wrapper {block:NoStretchHeaderImage}contain{/block:NoStretchHeaderImage}"&gt;
+                    &lt;a href="/" class="header-image {block:IfSlidingHeader}parallax{/block:IfSlidingHeader} {block:StretchHeaderImage}cover{/block:StretchHeaderImage} {block:NoStretchHeaderImage}contain{/block:NoStretchHeaderImage}" data-bg-image="{HeaderImage}"&gt;
+                        {block:NoStretchHeaderImage}
+                        &lt;img src="{HeaderImage}" alt=""&gt;
+                        {/block:NoStretchHeaderImage}
+                    &lt;/a&gt;
+                    &lt;div class="loader-bg"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                {/block:ShowHeaderImage}
+
+                &lt;div class="blog-title-wrapper content"&gt;
+                    &lt;figure class="avatar-wrapper{block:IndexPage} animate{/block:IndexPage}"&gt;
+                        &lt;a href="/" style="background-image: url({PortraitURL-128})" class="user-avatar"&gt;&lt;img src="{PortraitURL-128}" alt="" class="print-only invisible"&gt;&lt;/a&gt;
+                    &lt;/figure&gt;
+
+                    &lt;div class="title-group{block:IndexPage} animate{/block:IndexPage}"&gt;
+                        {block:ShowTitle}
+                        &lt;h1 class="blog-title"&gt;&lt;a href="/"&gt;{Title}&lt;/a&gt;&lt;/h1&gt;
+                        {/block:ShowTitle}
+                        {block:ShowDescription}
+                        &lt;span class="description"&gt;
+                            {Description}
+                        &lt;/span&gt;
+                        {/block:ShowDescription}
+
+                        {block:IfShowNavigation}
+                            &lt;div class="{block:HideTitle}{block:HideDescription}no-title-desc {/block:HideDescription}{/block:HideTitle}nav-wrapper content"&gt;
+                                &lt;nav class="nav-menu"&gt;
+                                    &lt;ul class="inline-nav"&gt;
+                                        {block:HasPages}
+                                            {block:Pages}
+                                            &lt;li class="nav-item nav-item--page"&gt;
+                                                &lt;a href="{URL}" class="label"&gt;{Label}&lt;/a&gt;
+                                            &lt;/li&gt;
+                                            {/block:Pages}
+                                        {/block:HasPages}
+                                        {block:AskEnabled}
+                                            &lt;li class="nav-item nav-item--ask"&gt;
+                                                &lt;a href="/ask" class="label"&gt;{AskLabel}&lt;/a&gt;
+                                            &lt;/li&gt;
+                                        {/block:AskEnabled}
+                                        {block:SubmissionsEnabled}
+                                            &lt;li class="nav-item nav-item--submit"&gt;
+                                                &lt;a href="/submit" class="label"&gt;{SubmitLabel}&lt;/a&gt;
+                                            &lt;/li&gt;
+                                        {/block:SubmissionsEnabled}
+                                        &lt;li class="nav-item nav-item--archive"&gt;
+                                            &lt;a href="/archive" class="label"&gt;{lang:Archive}&lt;/a&gt;
+                                        &lt;/li&gt;
+                                    &lt;/ul&gt;
+                                &lt;/nav&gt;
+                            &lt;/div&gt;
+                        {/block:IfShowNavigation}
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/header&gt;
+        &lt;/div&gt;
+        {block:SearchPage}
+            {block:NoSearchResults}
+            &lt;div class="search-no-results content"&gt;
+                {lang:Sorry no search results found}.
+            &lt;/div&gt;
+            {/block:NoSearchResults}
+        {/block:SearchPage}
+        &lt;section id="posts" class="content clearfix {block:HideTitle}{block:HideDescription}no-title-desc {/block:HideDescription}{/block:HideTitle}{block:HideHeaderImage}no-image {/block:HideHeaderImage} {block:ShowAvatar}avatar-style-{AvatarShape}{/block:ShowAvatar} {block:HideAvatar}avatar-hidden{/block:HideAvatar} {block:IfShowNavigation}show-nav{/block:IfShowNavigation}"&gt;
+
+            &lt;div data-page-id="{CurrentPage}"&gt;
+                {block:Posts inlineMediaWidth="700" inlineNestedMediaWidth="700"}
+                        &lt;article class="{block:Text}text {/block:Text}{block:Photoset}photoset {/block:Photoset}{block:Photo}photo {/block:Photo}{block:RebloggedFrom}reblogged {/block:RebloggedFrom}{block:Quote}quote {/block:Quote}{block:Link}link {/block:Link}{block:Chat}chat {/block:Chat}{block:Audio}audio {/block:Audio}{block:Video}video {/block:Video}{block:Answer}answer {/block:Answer}{block:Date}not-page post-{PostID}{/block:Date} {block:PermalinkPage} active exposed{/block:PermalinkPage}" {block:Date}data-post-id="{PostID}"{/block:Date}&gt;
+                            &lt;div class="post-wrapper clearfix"&gt;
+                                {block:RebloggedFrom}
+                                &lt;header class="reblog-header"&gt;
+                                    &lt;a class="reblog-link" href="{ReblogParentURL}"&gt;&lt;i class="icon-reblog"&gt;&lt;/i&gt;{ReblogParentName}&lt;/a&gt;
+                                &lt;/header&gt;
+                                {/block:RebloggedFrom}
+                                &lt;section class="post"&gt;
+                                    {block:Text}
+                                    &lt;div class="post-content"&gt;
+                                        {block:Title}&lt;h2 class="title"&gt;&lt;a href="{Permalink}"&gt;{Title}&lt;/a&gt;&lt;/h2&gt;{/block:Title}
+                                        {block:Body}
+                                        &lt;div class="body-text"&gt;
+                                            {Body}
+                                        &lt;/div&gt;
+                                        {/block:Body}
+                                    &lt;/div&gt;
+                                    {/block:Text}
+
+                                    {block:Photo}
+                                    &lt;figure class="post-content {block:HighRes}high-res{/block:HighRes}{block:Caption} with-caption{/block:Caption}" data-photo-width="{PhotoWidth-HighRes}"&gt;
+                                        &lt;div class="photo-wrapper"&gt;
+                                            &lt;div class="photo-wrapper-inner"&gt;
+                                                {LinkOpenTag}&lt;img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}"&gt;{LinkCloseTag}
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        {block:Caption}
+                                        &lt;figcaption class="caption"&gt;
+                                            {Caption}
+                                        &lt;/figcaption&gt;
+                                        {/block:Caption}
+                                    &lt;/figure&gt;
+                                    {/block:Photo}
+
+                                    {block:Photoset}
+                                    &lt;figure class="post-content photoset {block:Caption}with-caption{/block:Caption}"&gt;
+                                        {Photoset}
+                                        {block:Caption}
+                                        &lt;figcaption class="caption"&gt;
+                                            {Caption}
+                                        &lt;/figcaption&gt;
+                                        {/block:Caption}
+                                    &lt;/figure&gt;
+                                    {/block:Photoset}
+
+                                    {block:Quote}
+                                    &lt;div class="post-content"&gt;
+                                        &lt;blockquote class="{Length}"&gt;
+                                            {Quote}
+                                        &lt;/blockquote&gt;
+                                        {block:Source}
+                                        &lt;div class="source"&gt;{Source}&lt;/div&gt;
+                                        {/block:Source}
+                                    &lt;/div&gt;
+                                    {/block:Quote}
+
+
+                                    {block:Link}
+                                    &lt;div class="post-content{block:Description} with-caption{/block:Description}{block:Thumbnail} with-thumbnail{/block:Thumbnail}"&gt;
+                                        &lt;div class="link-wrapper"&gt;
+                                            &lt;a {Target} href="{URL}" class="link"&gt;
+                                                {block:Thumbnail}
+                                                &lt;div class="link-thumbnail"&gt;&lt;img src="{Thumbnail-HighRes}" alt="" /&gt;&lt;/div&gt;
+                                                {/block:Thumbnail}
+                                                &lt;div class="link-text-wrapper clearfix"&gt;
+                                                    &lt;div class="link-text"&gt;
+                                                        {block:Host}
+                                                        &lt;div class="link-host"&gt;{Host}&lt;/div&gt;
+                                                        {/block:Host}
+                                                        &lt;h2 class="link-title"&gt;{Name}&lt;/h2&gt;
+                                                        {block:Excerpt}
+                                                        &lt;div class="link-excerpt"&gt;{Excerpt}&lt;/div&gt;
+                                                        {/block:Excerpt}
+                                                        {block:Author}
+                                                        &lt;div class="link-author"&gt;{Author}&lt;/div&gt;
+                                                        {/block:Author}
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/a&gt;
+                                        &lt;/div&gt;
+                                        {block:Description}
+                                        &lt;div class="caption"&gt;
+                                            {Description}
+                                        &lt;/div&gt;
+                                        {/block:Description}
+                                    &lt;/div&gt;
+                                    {/block:Link}
+
+
+                                    {block:Chat}
+                                    &lt;div class="post-content"&gt;
+                                        {block:Title}&lt;h2 class="title"&gt;&lt;a href="{Permalink}"&gt;{Title}&lt;/a&gt;&lt;/h2&gt;{/block:Title}
+                                        &lt;ul class="conversation"&gt;
+                                        {block:Lines}
+                                            &lt;li class="chat-{Alt}"&gt;{block:Label}&lt;span class="label"&gt;{Label}&lt;/span&gt;{/block:Label} {Line}&lt;/li&gt;
+                                        {/block:Lines}
+                                        &lt;/ul&gt;
+                                    &lt;/div&gt;
+                                    {/block:Chat}
+
+
+                                    {block:Audio}
+                                    &lt;div class="post-content {block:Caption}with-caption{/block:Caption}"&gt;
+                                        &lt;div class="audio_container"&gt;
+                                            {block:AudioEmbed}
+                                                {AudioEmbed color="white"}
+                                            {/block:AudioEmbed}
+                                        &lt;/div&gt;
+                                        {block:Caption}
+                                        &lt;div class="caption"&gt;
+                                            {Caption}
+                                        &lt;/div&gt;
+                                        {/block:Caption}
+                                    &lt;/div&gt;
+                                    {/block:Audio}
+
+
+                                    {block:Video}
+                                    &lt;figure class="post-content {block:Caption}with-caption{/block:Caption}"&gt;
+                                        &lt;div class="video-wrapper"&gt;
+                                            {Video-700}
+                                        &lt;/div&gt;
+                                        {block:Caption}
+                                        &lt;figcaption class="caption"&gt;
+                                            {Caption}
+                                        &lt;/figcaption&gt;
+                                        {/block:Caption}
+                                    &lt;/figure&gt;
+                                    {/block:Video}
+
+                                    {block:Answer}
+                                    &lt;div class="post-content"&gt;
+                                        &lt;div class="note-item note-item-asker"&gt;
+                                            &lt;div class="text"&gt;
+                                                &lt;p class="asker"&gt;&lt;strong&gt;{Asker}&lt;/strong&gt; asked:&lt;/p&gt;
+                                                &lt;div class="asker-question"&gt;
+                                                    {Question}
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class="avatar"&gt;
+                                                &lt;img class="asker-avatar" src="{AskerPortraitURL-96}" alt=""&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        {block:Answerer}
+                                        &lt;div class="note-item note-item-answerer"&gt;
+                                            &lt;div class="text"&gt;
+                                                &lt;p class="answerer"&gt;&lt;strong&gt;{Answerer}&lt;/strong&gt; answered:&lt;/p&gt;
+                                                &lt;div class="answerer-answer"&gt;
+                                                    {Answer}
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class="avatar"&gt;
+                                                &lt;img class="answerer-avatar" src="{AnswererPortraitURL-96}" alt=""&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        {/block:Answerer}
+
+                                        &lt;div class="replies"&gt;
+                                            {Replies}
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    {/block:Answer}
+
+                                    &lt;section class="inline-meta post-extra{block:RebloggedFrom} has-reblog{/block:RebloggedFrom}{block:ContentSource} has-source{/block:ContentSource}{block:HasTags} has-tags{/block:HasTags}"&gt;
+                                        {block:RebloggedFrom}
+                                            &lt;a class="meta-item reblog-link" href="{ReblogParentURL}"&gt;&lt;i class="icon-reblog"&gt;&lt;/i&gt;{ReblogParentName}&lt;/a&gt;
+                                        {/block:RebloggedFrom}
+                                        {block:ContentSource}
+                                            &lt;a class="meta-item source-link" href="{SourceURL}"&gt;{lang:Source}: {SourceTitle}&lt;/a&gt;
+                                        {/block:ContentSource}
+                                        {block:HasTags}
+                                            {block:Tags}
+                                                 &lt;a class="meta-item tag-link" href="{TagURL}"&gt;{Tag}&lt;/a&gt;
+                                            {/block:Tags}
+                                        {/block:HasTags}
+                                    &lt;/section&gt;
+
+                                &lt;/section&gt;
+
+                                {block:Date}
+                                &lt;section class="panel"&gt;
+                                    &lt;footer class="post-footer"&gt;
+                                        &lt;section class="inline-meta date-notes"&gt;
+                                            &lt;div class="date-note-wrapper"&gt;
+                                                {block:NoteCount}
+                                                    &lt;span class="notes-pop-container"&gt;
+                                                        &lt;a href="{Permalink}#notes" class="meta-item post-notes"&gt;{NoteCountWithLabel}&lt;/a&gt;
+                                                        {block:PermalinkPage}
+                                                            {block:PostNotes}
+                                                                &lt;section id="notes" class="notes-wrapper clearfix"&gt;
+                                                                    &lt;div class="notes-wrapper-header"&gt;
+                                                                        &lt;span class="notes-wrapper-header-close"&gt;
+                                                                            &lt;svg width="15px" height="15px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+                                                                                &lt;g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"&gt;
+                                                                                    &lt;path d="M12.510351,14.6860639 L0,27.1964147 L2.175713,29.3721278 L14.686064,16.8617771 L27.196415,29.3721278 L29.372128,27.1964147 L16.861777,14.6860639 L29.372128,2.1757132 L27.196415,0 L14.686064,12.5103507 L2.175713,0 L0,2.1757132 L12.510351,14.6860639 L12.510351,14.6860639 Z" fill="#D3D3D3"&gt;&lt;/path&gt;
+                                                                                &lt;/g&gt;
+                                                                            &lt;/svg&gt;
+                                                                        &lt;/span&gt;
+                                                                        {NoteCountWithLabel}
+                                                                    &lt;/div&gt;
+                                                                    {PostNotes-64}
+                                                                &lt;/section&gt;
+                                                            {/block:PostNotes}
+                                                        {/block:PermalinkPage}
+                                                    &lt;/span&gt;
+                                                {/block:NoteCount}
+                                                &lt;a href="{Permalink}" title="{TimeAgo}" class="meta-item post-date"&gt;{ShortMonth} {DayOfMonth}{DayOfMonthSuffix}, {Year}&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/section&gt;
+
+                                        &lt;section class="post-controls"&gt;
+                                            &lt;div class="controls-wrapper"&gt;
+                                                &lt;div class="control share-control"&gt;
+                                                    &lt;nav class="pop"&gt;
+                                                        &lt;a href="#" class="share selector icon-export"&gt;&lt;/a&gt;
+                                                        &lt;div class="pop-menu share-menu south" id="share_{PostID}"&gt;
+                                                            &lt;ul&gt;
+                                                                &lt;li class="open-in-app"&gt;&lt;a href="#" class="share-item open-in-app" data-post="{PostID}"&gt;{lang:Open in app}&lt;/a&gt;&lt;/li&gt;
+                                                                &lt;li&gt;&lt;a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;amp;t={URLEncodedTitle}" class="share-item facebook" target="_blank"&gt;{lang:Facebook}&lt;/a&gt;&lt;/li&gt;
+                                                                &lt;li&gt;&lt;a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" class="share-item twitter" target="_blank"&gt;{lang:Tweet}&lt;/a&gt;&lt;/li&gt;
+                                                                {block:Photo}
+                                                                    &lt;li&gt;&lt;a href="//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;amp;media={PhotoURL-500}" class="share-item pinterest" target="_blank"&gt;{lang:Pinterest}&lt;/a&gt;&lt;/li&gt;
+                                                                {/block:Photo}
+                                                                {block:Video}{block:VideoThumbnail}
+                                                                    &lt;li&gt;&lt;a href="//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;amp;media={VideoThumbnailURL}&amp;amp;is_video=true" class="share-item pinterest" target="_blank"&gt;{lang:Pinterest}&lt;/a&gt;&lt;/li&gt;
+                                                                {/block:VideoThumbnail}{/block:Video}
+                                                                &lt;li&gt;&lt;a href="https://reddit.com/submit?url={URLEncodedPermalink}" class="share-item reddit" target="_blank"&gt;{lang:Reddit}&lt;/a&gt;&lt;/li&gt;
+                                                                &lt;li&gt;&lt;a href="mailto:?subject={URLEncodedShareString}&amp;amp;body={URLEncodedMailSummary}" class="share-item mail"&gt;{lang:Mail}&lt;/a&gt;&lt;/li&gt;
+                                                                &lt;li&gt;&lt;a href="{EmbedUrl}" class="share-item permalink"&gt;{lang:Embed}&lt;/a&gt;&lt;/li&gt;
+                                                                &lt;li&gt;&lt;a href="{Permalink}" class="share-item permalink"&gt;{lang:Permalink} &lt;i class="icon-arrow_carrot_right"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                                            &lt;/ul&gt;
+                                                        &lt;/div&gt;
+                                                    &lt;/nav&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="control reblog-control"&gt;{ReblogButton size="21" color="black"}&lt;/div&gt;
+                                                &lt;div class="control like-control"&gt;{LikeButton size="20" color="black"}&lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/section&gt;
+                                    &lt;/footer&gt;
+                                &lt;/section&gt;
+                                {/block:Date}
+                                {block:PermalinkPage}
+
+                                    {block:Date}
+
+                                        {block:IfDisqusShortname}
+                                        &lt;section class="comments"&gt;
+                                            &lt;div id="disqus_thread"&gt;&lt;/div&gt;
+                                            &lt;script type="text/javascript"&gt;
+                                              (function() {
+                                               var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                               dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+                                               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                              })();
+                                            &lt;/script&gt;
+                                            &lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+                                            &lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+                                        &lt;/section&gt;
+                                        {/block:IfDisqusShortname}
+
+                                    {/block:Date}
+
+                                {/block:PermalinkPage}
+                            &lt;/div&gt;
+                        &lt;/article&gt;
+                {/block:Posts}
+            &lt;/div&gt;
+        &lt;/section&gt;
+        {block:IfRelatedPosts}
+            {block:RelatedPosts}
+                &lt;section class="related-posts-wrapper"&gt;
+                    &lt;h2&gt;{lang:More you might like}&lt;/h2&gt;
+                    &lt;div class="related-posts grid"&gt;
+                    {block:Posts inlineMediaWidth="700" inlineNestedMediaWidth="700"}
+                            &lt;article class="{block:Text}text {/block:Text}{block:Photoset}photoset {/block:Photoset}{block:Photo}photo {/block:Photo}{block:RebloggedFrom}reblogged {/block:RebloggedFrom}{block:Quote}quote {/block:Quote}{block:Link}link {/block:Link}{block:Chat}chat {/block:Chat}{block:Audio}audio {/block:Audio}{block:Video}video {/block:Video}{block:Answer}answer {/block:Answer}{block:Date}not-page post-{PostID}{/block:Date} {block:PermalinkPage} active exposed{/block:PermalinkPage}" {block:Date}data-post-id="{PostID}"{/block:Date}&gt;
+                                &lt;div class="post-wrapper clearfix"&gt;
+                                    {block:RebloggedFrom}
+                                    &lt;header class="reblog-header"&gt;
+                                        &lt;a class="reblog-link" href="{ReblogParentURL}"&gt;&lt;i class="icon-reblog"&gt;&lt;/i&gt;{ReblogParentName}&lt;/a&gt;
+                                    &lt;/header&gt;
+                                    {/block:RebloggedFrom}
+                                    &lt;section class="post"&gt;
+                                        {block:Text}
+                                        &lt;div class="post-content"&gt;
+                                            {block:Title}&lt;h2 class="title"&gt;&lt;a href="{Permalink}"&gt;{Title}&lt;/a&gt;&lt;/h2&gt;{/block:Title}
+                                            {block:Body}
+                                            &lt;div class="body-text"&gt;
+                                                {Body}
+                                            &lt;/div&gt;
+                                            {/block:Body}
+                                        &lt;/div&gt;
+                                        {/block:Text}
+
+                                        {block:Photo}
+                                        &lt;figure class="post-content {block:HighRes}high-res{/block:HighRes}{block:Caption} with-caption{/block:Caption}" data-photo-width="{PhotoWidth-HighRes}"&gt;
+                                            &lt;div class="photo-wrapper"&gt;
+                                                &lt;div class="photo-wrapper-inner"&gt;
+                                                    &lt;a href="{Permalink}"&gt;&lt;img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}"&gt;&lt;/a&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            {block:Caption}
+                                            &lt;figcaption class="caption"&gt;
+                                                {Caption}
+                                            &lt;/figcaption&gt;
+                                            {/block:Caption}
+                                        &lt;/figure&gt;
+                                        {/block:Photo}
+
+                                        {block:Photoset}
+                                        &lt;figure class="post-content photoset {block:Caption}with-caption{/block:Caption}"&gt;
+                                            {Photoset}
+                                            {block:Caption}
+                                            &lt;figcaption class="caption"&gt;
+                                                {Caption}
+                                            &lt;/figcaption&gt;
+                                            {/block:Caption}
+                                        &lt;/figure&gt;
+                                        {/block:Photoset}
+
+                                        {block:Quote}
+                                        &lt;div class="post-content"&gt;
+                                            &lt;blockquote class="{Length}"&gt;
+                                                {Quote}
+                                            &lt;/blockquote&gt;
+                                            {block:Source}
+                                            &lt;div class="source"&gt;{Source}&lt;/div&gt;
+                                            {/block:Source}
+                                        &lt;/div&gt;
+                                        {/block:Quote}
+
+
+                                        {block:Link}
+                                        &lt;div class="post-content{block:Description} with-caption{/block:Description}{block:Thumbnail} with-thumbnail{/block:Thumbnail}"&gt;
+                                            &lt;div class="link-wrapper"&gt;
+                                                &lt;a {Target} href="{URL}" class="link"&gt;
+                                                    {block:Thumbnail}
+                                                    &lt;div class="link-thumbnail"&gt;&lt;img src="{Thumbnail-HighRes}" alt="" /&gt;&lt;/div&gt;
+                                                    {/block:Thumbnail}
+                                                    &lt;div class="link-text-wrapper clearfix"&gt;
+                                                        &lt;div class="link-text"&gt;
+                                                            {block:Host}
+                                                            &lt;div class="link-host"&gt;{Host}&lt;/div&gt;
+                                                            {/block:Host}
+                                                            &lt;h2 class="link-title"&gt;{Name}&lt;/h2&gt;
+                                                            {block:Excerpt}
+                                                            &lt;div class="link-excerpt"&gt;{Excerpt}&lt;/div&gt;
+                                                            {/block:Excerpt}
+                                                            {block:Author}
+                                                            &lt;div class="link-author"&gt;{Author}&lt;/div&gt;
+                                                            {/block:Author}
+                                                        &lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/a&gt;
+                                            &lt;/div&gt;
+                                            {block:Description}
+                                            &lt;div class="caption"&gt;
+                                                {Description}
+                                            &lt;/div&gt;
+                                            {/block:Description}
+                                        &lt;/div&gt;
+                                        {/block:Link}
+
+                                        {block:Chat}
+                                        &lt;div class="post-content"&gt;
+                                            {block:Title}&lt;h2 class="title"&gt;&lt;a href="{Permalink}"&gt;{Title}&lt;/a&gt;&lt;/h2&gt;{/block:Title}
+                                            &lt;ul class="conversation"&gt;
+                                            {block:Lines}
+                                                &lt;li class="chat-{Alt}"&gt;{block:Label}&lt;span class="label"&gt;{Label}&lt;/span&gt;{/block:Label} {Line}&lt;/li&gt;
+                                            {/block:Lines}
+                                            &lt;/ul&gt;
+                                        &lt;/div&gt;
+                                        {/block:Chat}
+
+                                        {block:Audio}
+                                        &lt;div class="post-content {block:Caption}with-caption{/block:Caption}"&gt;
+                                            &lt;div class="audio_container"&gt;
+                                                {block:AudioEmbed}
+                                                    {AudioEmbed color="white"}
+                                                {/block:AudioEmbed}
+                                            &lt;/div&gt;
+                                            {block:Caption}
+                                            &lt;div class="caption"&gt;
+                                                {Caption}
+                                            &lt;/div&gt;
+                                            {/block:Caption}
+                                        &lt;/div&gt;
+                                        {/block:Audio}
+
+                                        {block:Video}
+                                        &lt;figure class="post-content {block:Caption}with-caption{/block:Caption}"&gt;
+                                            &lt;div class="video-wrapper"&gt;
+                                                {Video-700}
+                                            &lt;/div&gt;
+                                            {block:Caption}
+                                            &lt;figcaption class="caption"&gt;
+                                                {Caption}
+                                            &lt;/figcaption&gt;
+                                            {/block:Caption}
+                                        &lt;/figure&gt;
+                                        {/block:Video}
+
+                                        {block:Answer}
+                                        &lt;div class="post-content"&gt;
+                                            &lt;div class="note-item note-item-asker"&gt;
+                                                &lt;div class="text"&gt;
+                                                    &lt;p class="asker"&gt;&lt;strong&gt;{Asker}&lt;/strong&gt; asked:&lt;/p&gt;
+                                                    &lt;div class="asker-question"&gt;
+                                                        {Question}
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="avatar"&gt;
+                                                    &lt;img class="asker-avatar" src="{AskerPortraitURL-96}" alt=""&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+
+                                            {block:Answerer}
+                                            &lt;div class="note-item note-item-answerer"&gt;
+                                                &lt;div class="text"&gt;
+                                                    &lt;p class="answerer"&gt;&lt;strong&gt;{Answerer}&lt;/strong&gt; answered:&lt;/p&gt;
+                                                    &lt;div class="answerer-answer"&gt;
+                                                        {Answer}
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="avatar"&gt;
+                                                    &lt;img class="answerer-avatar" src="{AnswererPortraitURL-96}" alt=""&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            {/block:Answerer}
+
+                                            &lt;div class="replies"&gt;
+                                                {Replies}
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        {/block:Answer}
+
+                                        &lt;section class="inline-meta post-extra{block:RebloggedFrom} has-reblog{/block:RebloggedFrom}{block:ContentSource} has-source{/block:ContentSource}{block:HasTags} has-tags{/block:HasTags}"&gt;
+                                            {block:RebloggedFrom}
+                                                &lt;a class="meta-item reblog-link" href="{ReblogParentURL}"&gt;&lt;i class="icon-reblog"&gt;&lt;/i&gt;{ReblogParentName}&lt;/a&gt;
+                                            {/block:RebloggedFrom}
+                                            {block:ContentSource}
+                                                &lt;a class="meta-item source-link" href="{SourceURL}"&gt;{lang:Source}: {SourceTitle}&lt;/a&gt;
+                                            {/block:ContentSource}
+                                            {block:HasTags}
+                                                {block:Tags}
+                                                     &lt;a class="meta-item tag-link" href="{TagURL}"&gt;{Tag}&lt;/a&gt;
+                                                {/block:Tags}
+                                            {/block:HasTags}
+                                        &lt;/section&gt;
+
+                                    &lt;/section&gt;
+
+                                    {block:Date}
+                                    &lt;section class="panel"&gt;
+                                        &lt;footer class="post-footer"&gt;
+                                            &lt;section class="inline-meta date-notes"&gt;
+                                                &lt;div class="date-note-wrapper"&gt;
+                                                    {block:NoteCount}
+                                                        &lt;a href="{Permalink}#notes" class="meta-item post-notes"&gt;{NoteCountWithLabel}&lt;/a&gt;
+                                                    {/block:NoteCount}
+                                                &lt;/div&gt;
+                                            &lt;/section&gt;
+
+                                            &lt;section class="post-controls"&gt;
+                                                &lt;div class="controls-wrapper"&gt;
+                                                    &lt;div class="control share-control"&gt;
+                                                        &lt;nav class="pop"&gt;
+                                                            &lt;a href="#" class="share selector icon-export"&gt;&lt;/a&gt;
+                                                            &lt;div class="pop-menu share-menu south" id="share_{PostID}"&gt;
+                                                                &lt;ul&gt;
+                                                                    &lt;li class="open-in-app"&gt;&lt;a href="#" class="share-item open-in-app" data-post="{PostID}"&gt;{lang:Open in app}&lt;/a&gt;&lt;/li&gt;
+                                                                    &lt;li&gt;&lt;a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;amp;t={URLEncodedTitle}" class="share-item facebook" target="_blank"&gt;{lang:Facebook}&lt;/a&gt;&lt;/li&gt;
+                                                                    &lt;li&gt;&lt;a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" class="share-item twitter" target="_blank"&gt;{lang:Tweet}&lt;/a&gt;&lt;/li&gt;
+                                                                    {block:Photo}
+                                                                        &lt;li&gt;&lt;a href="//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;amp;media={PhotoURL-500}" class="share-item pinterest" target="_blank"&gt;{lang:Pinterest}&lt;/a&gt;&lt;/li&gt;
+                                                                    {/block:Photo}
+                                                                    {block:Video}{block:VideoThumbnail}
+                                                                        &lt;li&gt;&lt;a href="//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;amp;media={VideoThumbnailURL}&amp;amp;is_video=true" class="share-item pinterest" target="_blank"&gt;{lang:Pinterest}&lt;/a&gt;&lt;/li&gt;
+                                                                    {/block:VideoThumbnail}{/block:Video}
+                                                                    &lt;li&gt;&lt;a href="https://reddit.com/submit?url={URLEncodedPermalink}" class="share-item reddit" target="_blank"&gt;{lang:Reddit}&lt;/a&gt;&lt;/li&gt;
+                                                                    &lt;li&gt;&lt;a href="mailto:?subject={URLEncodedShareString}&amp;amp;body={URLEncodedMailSummary}" class="share-item mail"&gt;{lang:Mail}&lt;/a&gt;&lt;/li&gt;
+                                                                    &lt;li&gt;&lt;a href="{EmbedUrl}" class="share-item permalink"&gt;{lang:Embed}&lt;/a&gt;&lt;/li&gt;
+                                                                    &lt;li&gt;&lt;a href="{Permalink}" class="share-item permalink"&gt;{lang:Permalink} &lt;i class="icon-arrow_carrot_right"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                                                &lt;/ul&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/nav&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class="control reblog-control"&gt;{ReblogButton size="21" color="black"}&lt;/div&gt;
+                                                    &lt;div class="control like-control"&gt;{LikeButton size="20" color="black"}&lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/section&gt;
+                                        &lt;/footer&gt;
+                                    &lt;/section&gt;
+                                    {/block:Date}
+                                &lt;/div&gt;
+                            &lt;/article&gt;
+                    {/block:Posts}
+                    &lt;/div&gt;
+                    &lt;div class="related-posts-cta content"&gt;
+                        &lt;!-- @todo: translate these strings --&gt;
+                        &lt;a class="related-post-cta button bordered open-in-app"&gt;{lang:See this in the app}&lt;/a&gt;
+                        &lt;a class="related-post-cta see-more button bordered" href="/"&gt;{lang:Show more}&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/section&gt;
+            {/block:RelatedPosts}
+        {/block:IfRelatedPosts}
+        &lt;footer id="footer" class="content clearfix"&gt;
+            {block:IndexPage}
+                {block:Pagination}
+                &lt;div id="pagination"&gt;
+                    {block:PreviousPage}
+                    &lt;a href="{PreviousPage}" class="previous" data-current-page="{CurrentPage}" data-total-pages="{TotalPages}"&gt;{lang:Previous}&lt;span class="bg"&gt;&lt;/span&gt;&lt;/a&gt;
+                    {/block:PreviousPage}
+                    {block:NextPage}
+                    &lt;a href="{NextPage}" class="next" data-current-page="{CurrentPage}" data-total-pages="{TotalPages}"&gt;{lang:Next}&lt;span class="bg"&gt;&lt;/span&gt;&lt;/a&gt;
+                    {/block:NextPage}
+                    &lt;div class="loader"&gt;&lt;div class="loader-bar"&gt;&lt;/div&gt;&lt;div class="loader-bar"&gt;&lt;/div&gt;&lt;div class="loader-bar"&gt;&lt;/div&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                {/block:Pagination}
+            {/block:IndexPage}
+        &lt;/footer&gt;
+    &lt;/section&gt;
+    &lt;script&gt;
+        var Optica = {};
+        Optica.ENDLESS_SCROLLING = {block:IfEndlessScrolling}true{/block:IfEndlessScrolling}{block:IfNotEndlessScrolling}false{/block:IfNotEndlessScrolling};
+        Optica.LAYOUT = "{select:Layout}";
+        Optica.GRID_LAYOUT = (Optica.LAYOUT === 'grid');
+        Optica.TITLE_COLOR = "{TitleColor}";
+        Optica.ACCENT_COLOR = "{AccentColor}";
+        Optica.BACKGROUND_COLOR = "{BackgroundColor}";
+        Optica.RELATED_POSTS_CTA_VARIANTS = [
+           {
+               variant: "C",
+               text: "{lang:Open In App CTA C}"
+           },
+           {
+               variant: "D",
+               text: "{lang:Open In App CTA D}"
+           },
+           {
+               variant: "E",
+               text: "{lang:Open In App CTA E}"
+           }
+        ];
+    &lt;/script&gt;
+    &lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;!window.jQuery &amp;&amp; document.write(unescape('%3Cscript src="http://static.tumblr.com/vr9xgox/sBgmmjhyw/jquery-1.9.1.min.js"%3E%3C/script%3E'));&lt;/script&gt;
+    &lt;script src="http://static.tumblr.com/t1owtkf/sfOnynt6a/main-min.js"&gt;&lt;/script&gt;
+
+    {block:IfGoogleAnalyticsID}
+        &lt;script&gt;
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', '{text:Google Analytics ID}', 'auto');
+          ga('send', 'pageview');
+        &lt;/script&gt;
+    {/block:IfGoogleAnalyticsID}
+
+    {block:IfRelatedPosts}
+        {block:RelatedPosts}
+            &lt;script src="https://secure.static.tumblr.com/t1owtkf/bSAnvroul/jquery.waypoints.min.js" type="text/javascript"&gt;&lt;/script&gt;
+            &lt;script type="text/javascript"&gt;
+                $(function() {
+                    var trackingPixels = {TrackingPixels};
+
+                    var analytics_frame = document.getElementById('ga_target');
+                    var analytics_iframe_loaded;
+                    var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+                    var eventer = window[eventMethod];
+                    var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+                    eventer(messageEvent,function(e) {
+                        var message = (e.data &amp;&amp; e.data.split) ? e.data.split(';') : '';
+                        if (message[0] == 'analytics_iframe_loaded') {
+                            analytics_iframe_loaded = true;
+                        }
+                    });
+
+                    $('.related-posts &gt; article').waypoint(function() {
+                        if (!analytics_iframe_loaded) {
+                            return;
+                        }
+
+                        var post_id = $(this.element).data('post-id');
+                        if (typeof trackingPixels[post_id] == 'undefined' || !trackingPixels[post_id]) {
+                            return;
+                        }
+
+                        var trackingPixel = trackingPixels[post_id];
+
+                        analytics_frame.contentWindow.postMessage(
+                            ['tick_related_post', trackingPixel].join(';'),
+                            analytics_frame.src.split('/analytics.html')[0]
+                        );
+
+                        trackingPixels[post_id] = null;
+                    }, {
+                        offset: '100%'
+                    });
+                });
+            &lt;/script&gt;
+        {/block:RelatedPosts}
+    {/block:IfRelatedPosts}
+    {block:IfSyntaxHighlighting}
+    &lt;script type="text/javascript" src="http://static.tumblr.com/ehm1tdz/Mhunye5t3/highlight.pack.js"/&gt;&lt;/script&gt;
+    &lt;script type="text/javascript"&gt;
+        (function($) {
+            $(document).ready(function() {
+                $('.post-content pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });
+            });
+        })(window.jQuery);
+    &lt;/script&gt;
+    {/block:IfSyntaxHighlighting}
+&lt;/body&gt;
+</code></pre>
+
+<p></p>
       </section>
     </div>
 
